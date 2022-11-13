@@ -14,7 +14,7 @@ import ru.akhmetovdaniyar.weatherapp.data.models.Forecastday
 
 class AdapterWeeks(private val data: List<Forecastday>, private val context: Context): RecyclerView.Adapter<AdapterWeeks.MyViewHolder>() {
 
-    class MyViewHolder(val view: View): RecyclerView.ViewHolder(view) {
+    class MyViewHolder(view: View): RecyclerView.ViewHolder(view) {
 
             val date: TextView
             val temp: TextView
@@ -36,7 +36,7 @@ class AdapterWeeks(private val data: List<Forecastday>, private val context: Con
 
         override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
             holder.date.text = data[position].date
-            holder.temp.text = data[position].day.avgtemp_c.toString()
+            holder.temp.text = data[position].day.avgtemp_c.toString()+" °C"
             Glide.with(context).load(Uri.parse("https:"+data[position].day.condition.icon)).centerCrop().into(holder.iconImage)
             holder.desc.text = data[position].day.condition.text
         }

@@ -32,11 +32,12 @@ class FragmentWeek : Fragment() {
         recyclerView.setHasFixedSize(true);
         recyclerView.layoutManager = LinearLayoutManager(view.context)
         weekViewModel.forecast.observe(viewLifecycleOwner) {
-            forecastDays = it.forecast.forecastday
-            recyclerView.adapter?.notifyDataSetChanged()
-            recyclerView.adapter = AdapterWeeks(forecastDays, view.context)
-
+            try {
+                forecastDays = it.forecast.forecastday
+                recyclerView.adapter?.notifyDataSetChanged()
+                recyclerView.adapter = AdapterWeeks(forecastDays, view.context)
+            } catch (_:Exception) {
+            }
         }
-
     }
 }

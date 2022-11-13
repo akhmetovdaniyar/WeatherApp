@@ -10,18 +10,23 @@
         android:id="@+id/temp"
         android:layout_width="111dp"
         android:layout_height="35dp"
+        android:layout_marginStart="120dp"
         android:textAlignment="viewStart"
         android:textSize="24sp"
-        android:layout_marginStart="180sp"
+        android:textColor="@color/grey"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/desc"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="180sp"
+        android:layout_marginStart="120dp"
+        android:ellipsize="end"
+        android:lines="2"
+        android:singleLine="false"
+        android:textColor="@color/grey"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -32,11 +37,21 @@
         android:id="@+id/iconWeather"
         android:layout_width="64px"
         android:layout_height="64px"
-        android:layout_marginStart="130sp"
+        android:layout_marginStart="70dp"
         android:scaleX="2"
         android:scaleY="2"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.github.matteobattilana.weather.WeatherView
+        android:id="@+id/weather_view"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/temp"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

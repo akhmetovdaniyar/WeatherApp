@@ -59,7 +59,7 @@
         android:layout_marginBottom="20dp"
         android:autofillHints=""
         android:ems="10"
-        android:hint="@string/cityHint"
+        android:hint="@string/city"
         android:inputType="textPersonName"
         android:minWidth="150sp"
         android:minHeight="50sp"

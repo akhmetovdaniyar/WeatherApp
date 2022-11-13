@@ -3,6 +3,7 @@
     <string name="today">Сегодня</string>
     <string name="week">Неделя</string>
     <string name="city">Город</string>
+    <string name="cityHint">Введите город</string>
     <string name="temp">Темп</string>
     <string name="desc">Описание</string>
     <string name="date">Дата</string>
